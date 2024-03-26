@@ -10,17 +10,17 @@ export function buildWebpackConfig(options: BuildOptions):webpack.Configuration{
         mode: options.mode,
         entry: options.paths.entry,
         output: {
-          filename: '[name].[contenthash].js'
-        ,
-          path: options.paths.build ,
-          clean: true
+            filename: '[name].[contenthash].js'
+            ,
+            path: options.paths.build ,
+            clean: true
         },
-       plugins: buildPlugins(options) ,
-       module: {
-        rules: buildLoaders(options)
+        plugins: buildPlugins(options) ,
+        module: {
+            rules: buildLoaders(options)
         },
         resolve: buildResolvers(options),
         devtool: options.isDev ? 'inline-source-map' : undefined,
         devServer: options.isDev ? buildDevServer(options) : undefined
-      };
+    };
 }

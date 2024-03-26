@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { FC } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from './AppLink.module.scss'
