@@ -3,15 +3,18 @@
 @import './themes/light';
 @import './themes/dark';
 
-.app{
-    font: var(--font-m);
-    background: var(--bg-color);
-    color: var(--primary-color);
-
-    min-height: 100vh;
+body {
+   
 }
 
-.content-page{
+.app {
+    min-height: 100vh;
+    background: var(--bg-color);
+    font: var(--font-m);
+    color: var(--primary-color);
+}
+
+.content-page {
     display: flex;
 }
 
@@ -19,4 +22,3 @@
     flex-grow: 1;
     padding: 20px
 }
-

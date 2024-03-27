@@ -1,7 +1,7 @@
 import { useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ThemeSwitcher.module.scss'
-import {Button, ThemeButton } from 'shared/ui/Button';
+import {Button, ThemeButton } from 'shared/ui/Button/Button';
 
 interface ToggleThemeProps {
     className?: string

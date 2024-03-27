@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './PageError.module.scss'
-import Button from 'shared/ui/Button/ui/Button';
+import { Button } from 'shared/ui/Button/Button';
 
 export const PageError = () => {
 
