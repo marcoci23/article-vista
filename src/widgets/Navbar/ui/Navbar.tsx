@@ -4,6 +4,7 @@ import AppLink, { AppLinkTheme } from "shared/ui/AppLink/AppLink";
 import { Modal } from "shared/ui/Modal/Modal";
 import { Button, ThemeButton } from "shared/ui/Button/Button";
 import { useCallback, useState } from "react";
+import { LoginModal } from "features/AuthByUsername";
 
 interface NavbarProps {
     className?: string;
@@ -13,8 +14,12 @@ export const Navbar = ({ className }: NavbarProps) => {
 
     const [isAuthModal, setIsAuthModal] = useState(false)
 
-    const onToggleModal = useCallback(() => {
-        setIsAuthModal(prev => !prev)
+    const onCloseModal = useCallback(() => {
+        setIsAuthModal(false)
+    }, [])
+
+    const onShowModal = useCallback(() => {
+        setIsAuthModal(true)
     }, [])
 
     return (
@@ -22,11 +27,9 @@ export const Navbar = ({ className }: NavbarProps) => {
             <AppLink theme={AppLinkTheme.SECONDARY} to={'/'}>MAIN</AppLink>
             <AppLink theme={AppLinkTheme.SECONDARY} to={'/about'}>ABOUT</AppLink>
             <div className={cls.links}>
-                <Button theme={ThemeButton.CLEAR} onClick={onToggleModal}>Log In</Button>
+                <Button theme={ThemeButton.CLEAR} onClick={onShowModal}>Log In</Button>
             </div>
-            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                MODAL
-            </Modal>
+            <LoginModal isOpen={isAuthModal} onClose={onCloseModal}/>
         </div>
     );
 };
