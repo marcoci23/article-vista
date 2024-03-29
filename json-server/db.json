@@ -25,6 +25,12 @@
         "password": "123"
       }
     ],
-    "profile": { "name": "typicode" }
+    "profile": { 
+      "first": "Name",
+      "lastname": "Name",
+      "age": "23",
+      "username": "admin",
+      "avatar": ""
+     }
   }
   
