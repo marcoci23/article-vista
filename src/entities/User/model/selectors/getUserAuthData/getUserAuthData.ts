@@ -1,4 +1,4 @@
-import { StateSchema } from "app/providers/StoreProvider/config/StateSchema";
-import { useSelector } from "react-redux";
+import { StateSchema } from "app/providers/StoreProvider";
+
 
 export const getUserAuthData = (state: StateSchema) => state.user.authData
